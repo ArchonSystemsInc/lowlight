@@ -58,7 +58,7 @@
     "build": "tsc --build --clean && tsc --build && type-coverage",
     "format": "remark . --frail --output --quiet && prettier . --log-level warn --write && xo --fix",
     "generate": "node --conditions development script/build-registry.js",
-    "prepack": "npm run generate && npm run build && npm run format",
+    "prepack": "npm run build && npm run format",
     "test": "npm run generate && npm run build && npm run format && npm run test-coverage",
     "test-api": "node --conditions development test/index.js",
     "test-coverage": "c8 --100 --check-coverage --reporter lcov npm run test-api"
